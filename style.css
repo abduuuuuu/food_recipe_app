@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Josefin+Sans:wght@100;200;400&family=Poppins:wght@200;300;400;600&family=Square+Peg&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    border-bottom: 2px solid whitesmoke;
+    background-color: #fff;
+}
+header p{
+    font-size: 25px;
+    font-family: 'Square Peg', cursive;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+header p i{
+    color: green;
+}
+header form input{
+    border: 2px solid whitesmoke;
+    width: 300px;
+    height: 30px;
+    padding: 15px;
+    padding-left: 10px;
+    font-size: 17px;
+    position: relative;
+    border-color: rgb(76, 64, 64,0.3);
+}
+header form input::placeholder{
+    font-family: 'Square Peg', cursive;
+    font-size: 30px;
+}
+header form button{
+    position: absolute;
+    transform: translate(-23px,5px);
+    background-color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    color: green;
+}
+.food-container{
+    padding: 100px 20%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    align-items: center;
+    grid-gap: 3rem;
+}
+
+.food-container .food-item{
+    padding-bottom: 10px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 5px 5px 40px  rgb(19 8 73 / 13%); /*box-shadow : horizontal offset , vertical offset, blue value,spread value  */
+    border-radius: 10px 10px 0 0;
+    transition: all .40s ease;
+    cursor: pointer;   
+    position: relative;
+    overflow: hidden;
+}
+.food-container .food-item img{
+   max-width: 100%;
+   width: 400px;
+    height:auto;
+}
+.food-container .flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    grid-gap: 3rem;
+}
+
+.food-container a{
+    padding: 5px 20px;
+    background-color: transparent;
+    border: 2px solid rgb(76, 64, 64,0.3);
+    margin-bottom: 5px;
+    color: green;
+    border-radius: 5px;
+}
+@media screen and (max-width:730px) {
+ header{
+flex-direction: column;
+ }
+ header{
+    padding: 10px 3%;
+ }
+ .food-container{
+    padding: 30px 3%;   
+ }
+
+}
+
+@media screen and (max-width:500px){
+.food-container{
+    padding-top: 100px;
+}
+}
